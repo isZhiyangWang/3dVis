@@ -652,7 +652,7 @@ function disableScrollAndZoom(event) {
 // const controls = new OrbitControls(camera, renderer.domElement);
 const loadDistance = 5;
 const size = 300;
-const divisions = 50;
+const divisions = 2.5;
 scene.add(new THREE.GridHelper(size, divisions));
 // scene.add(new THREE.AxesHelper(100));
 
@@ -1008,8 +1008,8 @@ function setupClickEvent(sprites, camera, renderer) {
 function unSelectSprite(){
     if (focusSprite) {
         console.log("trigger unselect")
-        // focusSprite.scale.divideScalar(scaleRatio);
-        // focusSprite.position.y -= 5;
+        focusSprite.scale.divideScalar(scaleRatio);
+        focusSprite.position.y -= 5;
         focusSprite = null;
         const btnContainer = document.getElementById('btn-container');
         if (btnContainer) btnContainer.remove();
@@ -1018,12 +1018,12 @@ function unSelectSprite(){
 
 function selectSprite(sprite) {
     sprite.scale.multiplyScalar(scaleRatio);
-    sprite.position.y += 50;
+    sprite.position.y += 5;
     focusSprite = sprite;
     console.log("selectSprite is triggered" )
     console.log(focusSprite);
     enhanceSpriteWithText(focusSprite);
-    const targetPosition = new THREE.Vector3(sprite.position.x, sprite.position.y + 50, sprite.position.z);
+    const targetPosition = new THREE.Vector3(sprite.position.x + 2.5, sprite.position.y + 2.5, sprite.position.z +2.5);
 
     const lookAtPosition = new THREE.Vector3(sprite.position.x, sprite.position.y, sprite.position.z);
   
@@ -1265,9 +1265,7 @@ function moveCamera(target, lookAtPosition) {
             camera.position.copy(target);
             camera.quaternion.copy(targetQuaternion);
             console.log("last move!");
-            camera.lookAt(-focusSprite.position.x,focusSprite.position.y,-focusSprite.position.z);
-            console.log(camera.position.x,camera.position.y,camera.position.z);
-            console.log(focusSprite.position.x,focusSprite.position.y,focusSprite.position.z);
+            camera.lookAt(focusSprite.position.x,focusSprite.position.y,focusSprite.position.z);
             isCameraMoving = false;
             
             // Show or hide reset button based on target position
