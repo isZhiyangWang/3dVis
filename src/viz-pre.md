@@ -1,10 +1,10 @@
 ---
 toc: false
-title: Explore Visualizations in 3D Back UP
+title: Explore Visualizations in 3D
 ---
 
 
-# Explore Visualizations in 3D Back UP
+# Explore Visualizations in 3D
 
 
 <!-- below is the css for the decoration -->
@@ -1341,7 +1341,6 @@ function generateScatterPlot(data, w, h, parentDom) {
         console.error("Data contains undefined or NaN values", data);
         return;
     }
-
     // Plot configuration
     const plot = Plot.plot({
         width: w,
@@ -1361,8 +1360,7 @@ function generateScatterPlot(data, w, h, parentDom) {
             x: d => -d.x,
             y: d => d.z,
             src: "https://github.com/JimmyXwtx/3dVis/blob/master/src/data/grey-box.png?raw=true",
-            width: 120,
-            title: "Name"
+            width: 150,
           }),
             Plot.text(chartPos, {
                 x: d => -d.x,
@@ -1373,8 +1371,6 @@ function generateScatterPlot(data, w, h, parentDom) {
                 dy: -5,
                 fill: "black",
   
-                // Add an attribute for int_value
-                title: d => `int_value: ${d.int_value}` // Tooltip, not for attribute
             })
         ],
         x: { axis: null },
