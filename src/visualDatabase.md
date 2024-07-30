@@ -1,5 +1,5 @@
 ---
-title: Visualization Database
+title: Explore Visualizations in 2D
 toc: false
 ---
 
@@ -429,7 +429,7 @@ div.pswp__img--placeholder,
 .gallery-container{
     margin: 0;
     padding: 0;
-    background-color: transparent;
+    /* background-color: transparent; */
     font-family: 'Arial', sans-serif;
     height: 85vh;
     max-height: 900px;
@@ -445,12 +445,12 @@ div.pswp__img--placeholder,
   height: 100%;
   background-color: #f7f7f7;
   opacity: 0.1;
-  background-image:  linear-gradient(#626484 1.8px, transparent 1.8px), 
+  /* background-image:  linear-gradient(#626484 1.8px, transparent 1.8px), 
                      linear-gradient(90deg, #626484 1.8px, transparent 1.8px), 
                      linear-gradient(#626484 0.9px, transparent 0.9px), 
                      linear-gradient(90deg, #626484 0.9px, #e5e5f7 0.9px);
   background-size: 45px 45px, 45px 45px, 9px 9px, 9px 9px;
-  background-position: -1.8px -1.8px, -1.8px -1.8px, -0.9px -0.9px, -0.9px -0.9px;
+  background-position: -1.8px -1.8px, -1.8px -1.8px, -0.9px -0.9px, -0.9px -0.9px; */
   border-radius: 10px; /* Match border radius with parent */
   z-index: -1; /* Ensure it is behind the content */
 }

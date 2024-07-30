@@ -1,9 +1,10 @@
 ---
 toc: false
+title: Explore Visualizations in 3D
 ---
 
 
-# 3d Interactive Viz
+# Explore Visualizations in 3D
 
 
 <!-- below is the css for the decoration -->
@@ -25,6 +26,9 @@ toc: false
 }
 #threeD{
     display: flex;
+    /* background: #EEEEEE; */
+background: rgb(224,142,31);
+background: linear-gradient(0deg, rgba(224,142,31,1) 0%, rgba(185,185,185,1) 100%);
     justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
 
@@ -58,8 +62,8 @@ toc: false
 #map-title{
   position: absolute;
   top: 3%;
-  right: 35%;
-  width: 30%;
+  right: 10%;
+  width: 80%;
   height: 10%;
   background-color: transparent;
   color: black;
@@ -73,7 +77,7 @@ toc: false
 .full-content {
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.5); /* Optional: to see the full-content area */
+  background-color: rgba(255, 255, 255, 0.1); /* Optional: to see the full-content area */
   border-radius: 10px;
   overflow: hidden;
 }
@@ -123,7 +127,7 @@ toc: false
     position: absolute;
     justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
-    background-color: #f7f7f7;
+    background-color: transparent;
     scale: 0.95;
 }
 
@@ -138,7 +142,7 @@ toc: false
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: transparent; /* Set to transparent since we will use the pseudo-element for background */
+  background-color: white; /* Set to transparent since we will use the pseudo-element for background */
   box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
   border-radius: 10px; /* Slightly rounded corners */
   padding: 20px;
@@ -153,12 +157,12 @@ toc: false
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7;
   opacity: 0.1;
   background-image:  linear-gradient(#626484 1.8px, transparent 1.8px), 
                      linear-gradient(90deg, #626484 1.8px, transparent 1.8px), 
                      linear-gradient(#626484 0.9px, transparent 0.9px), 
-                     linear-gradient(90deg, #626484 0.9px, #e5e5f7 0.9px);
+                     linear-gradient(90deg, #626484 0.9px, #e5e5f7 0.9px); */
   background-size: 45px 45px, 45px 45px, 9px 9px, 9px 9px;
   background-position: -1.8px -1.8px, -1.8px -1.8px, -0.9px -0.9px, -0.9px -0.9px;
   border-radius: 10px; /* Match border radius with parent */
@@ -570,13 +574,15 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 let imagePositions;
 let sprites = [];
     const colors = [
-        "#e6194B", "#3cb44b", "#ffe119", "#4363d8", "#f58231", "#911eb4", "#46f0f0", "#f032e6",
-        "#bcf60c", "#fabebe", "#008080", "#e6beff", "#9a6324", "#fffac8", "#800000", "#aaffc3",
-        "#808000", "#ffd8b1", "#000075", "#808080", "#fa8072", "#4682b4", "#6a5acd", "#20b2aa",
-        "#9400d3", "#ff6347", "#40e0d0", "#ee82ee", "#dda0dd", "#b0c4de", "#ff7f50", "#6495ed",
-        "#deb887", "#5f9ea0", "#7fff00", "#d2691e", "#ff69b4", "#1e90ff", "#228b22", "#ffc0cb",
-        "#8a2be2", "#a52a2a", "#8b008b", "#b8860b", "#66cdaa", "#ff4500", "#daa520", "#98fb98",
-        "#afeeee", "#db7093"
+        // "#e6194B", "#3cb44b", "#ffe119", "#4363d8", "#f58231", "#911eb4", "#46f0f0", "#f032e6",
+        // "#bcf60c", "#fabebe", "#008080", "#e6beff", "#9a6324", "#fffac8", "#800000", "#aaffc3",
+        // "#808000", "#ffd8b1", "#000075", "#808080", "#fa8072", "#4682b4", "#6a5acd", "#20b2aa",
+        // "#9400d3", "#ff6347", "#40e0d0", "#ee82ee", "#dda0dd", "#b0c4de", "#ff7f50", "#6495ed",
+        // "#deb887", "#5f9ea0", "#7fff00", "#d2691e", "#ff69b4", "#1e90ff", "#228b22", "#ffc0cb",
+        // "#8a2be2", "#a52a2a", "#8b008b", "#b8860b", "#66cdaa", "#ff4500", "#daa520", "#98fb98",
+        // "#afeeee", "#db7093"
+         "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF",
+          "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF", "#E7EBEF"
     ];
 const scaleRatio = 2.3;
 
@@ -630,7 +636,7 @@ renderer.domElement.classList.add("hidden");
 renderer.setSize(canvasWidth, canvasHeight);
 document.getElementById("threeD").appendChild(renderer.domElement);
 renderer.domElement.style.borderRadius = "10px";
-renderer.setClearColor( 0xEFD9CE, 0.8 );
+renderer.setClearColor( 0xE77500, 0 );
 
 
 const myDiv = document.getElementById("threeD")
@@ -651,9 +657,9 @@ function disableScrollAndZoom(event) {
 }
 // const controls = new OrbitControls(camera, renderer.domElement);
 const loadDistance = 5;
-const size = 300;
-const divisions = 50;
-scene.add(new THREE.GridHelper(size, divisions));
+const size = 30000;
+const divisions = 1000;
+// scene.add(new THREE.GridHelper(size, divisions));
 // scene.add(new THREE.AxesHelper(100));
 
 
@@ -1058,13 +1064,13 @@ function selectSprite(sprite) {
             btn.style.margin = '0 5px'; // Button margin
             btn.style.border = 'none'; // Remove border
             btn.style.borderRadius = '8px'; // Button border radius
-            btn.style.backgroundColor = '#B6D7B9'; // Soft blue background color
-            btn.style.color = '#ffffff'; // Button text color
+            btn.style.backgroundColor = '#E7EBEF'; // Soft blue background color
+            btn.style.color = '#000000'; // Button text color
             btn.style.fontSize = '14px'; // Button font size
             btn.style.cursor = 'pointer'; // Pointer cursor on hover
             btn.style.transition = 'background-color 0.3s, transform 0.3s'; // Transition effect
-            btn.onmouseover = () => btn.style.backgroundColor = '#9ABD97'; // Hover background color
-            btn.onmouseout = () => btn.style.backgroundColor = '#B6D7B9'; // Default background color
+            btn.onmouseover = () => btn.style.backgroundColor = '#e2b87f'; // Hover background color
+            btn.onmouseout = () => btn.style.backgroundColor = '#E7EBEF'; // Default background color
             btn.onmousedown = () => btn.style.transform = 'scale(0.95)'; // Click scale effect
             btn.onmouseup = () => btn.style.transform = 'scale(1)'; 
             return btn;
@@ -1188,9 +1194,10 @@ function enhanceSpriteWithText(focusSprite) {
 
       // Display text with better spacing
       const textBaseLine = canvas.height * 0.80 + padding;
-      context.fillText(`Name: ${focusSprite.userData.name}`, padding, textBaseLine);
-      context.fillText(`Field: ${getObjectById(topicsArray, focusSprite.userData.topic).field}`, padding, textBaseLine + 50);
-      context.fillText(`SubField: ${getObjectById(topicsArray, focusSprite.userData.topic).subfield}`, padding, textBaseLine + 100);
+      context.fillText(`Chart Type: ${focusSprite.userData.name}`, padding, textBaseLine+20);
+      context.font = "32px Arial";
+      context.fillText(`Field: ${getObjectById(topicsArray, focusSprite.userData.topic).field}`, padding, textBaseLine + 80);
+      context.fillText(`SubField: ${getObjectById(topicsArray, focusSprite.userData.topic).subfield}`, padding, textBaseLine + 130);
 
       // Convert canvas to texture
       const canvasTexture = new THREE.CanvasTexture(canvas);
@@ -1344,11 +1351,19 @@ function generateScatterPlot(data, w, h, parentDom) {
                 x: d => -d.xPos / 10,
                 y: d => d.zPos / 10,
                 fill: d => colorScale(d.int_value),
-                fillOpacity: 0.2,
+          
+                fillOpacity: 0.9,
                 r: 4,
                 // Add an attribute for int_value
                 title: d => `int_value: ${d.int_value}` // Tooltip, not for attribute
             }),
+            Plot.image(chartPos, {
+            x: d => -d.x,
+            y: d => d.z,
+            src: "https://www.data-to-viz.com/img/section/Violin150.png",
+            width: 80,
+            title: "Name"
+          }),
             Plot.text(chartPos, {
                 x: d => -d.x,
                 y: d => d.z,
@@ -1357,6 +1372,7 @@ function generateScatterPlot(data, w, h, parentDom) {
                 fontSize: "17px",
                 dy: -5,
                 fill: "black",
+  
                 // Add an attribute for int_value
                 title: d => `int_value: ${d.int_value}` // Tooltip, not for attribute
             })
@@ -1453,15 +1469,15 @@ function generateScatterPlot(data, w, h, parentDom) {
 ```
 <div  id="loading" class="fade-in">
 <div class="loadingContent">
-<div class="contentTitle">Viz Sieves - 3D Exploration</div>
-<div class="contentInfo">Vis-sieve is a project that aims to analyze the use of visualizations in academia. Here is a 3D Space for you to navigate to explore the vizs used in acadmia and there influence</div>
+<div class="contentTitle">Vis Sieve - 3D Exploration</div>
+<div class="contentInfo">Vis-sieve is a project that aims to analyze the use of visualizations in academia. Here is a 3D Space for you to navigate to explore the visualizations used in academia.</div>
 <div class="contentInstruction">
 <div class="instructionDetails">
   <ul>
     <li><strong>Map Navigation:</strong> Click on each type of visualization to view that group of images.</li>
     <li><strong>3D Space Interaction:</strong> Use the mouse to move around and scroll to zoom in/out.</li>
     <li><strong>Viewing Details:</strong> Click on an interesting image to see more details.</li>
-    <li><strong>Image Navigation:</strong> After selecting an image, use the navbar below to view the full image, see details, or access related papers. You can also use the arrow keys (◄ ►) to navigate.</li>
+    <li><strong>Image Navigation:</strong> After selecting an image, use the navigation space bar below to view the full image, see details, or access related papers. You can also use the arrow keys (◄ ►) to navigate.</li>
   </ul>
 </div>
 </div>
@@ -1478,7 +1494,7 @@ function generateScatterPlot(data, w, h, parentDom) {
 <button id='resetButton' class="button-55" class="fade-in" >Go Back</button>
 <div id="mapContainer" class="hidden">
   <span id="closeButton" class="close-button">&#10005;</span>
-  <span id="map-title">Plots Distribution</span>
+  <span id="map-title"> Which Chart Type You Like To Explore?</span>
   <div class="full-content" id="full-map">
   </div>
 </div>
