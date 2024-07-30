@@ -417,7 +417,7 @@ const db = await DuckDBClient.of({base: FileAttachment("/data/publications_princ
 // data extraction by the defined data function 
 const publicationDB = await initialDB(db)
 const chartPos = await countChartPos(db);
-console.log(chartPos);
+// console.log(chartPos);
 const topicsArray = await countTopics(db);
 
 const getObjectById = (data,id) => {
@@ -578,7 +578,7 @@ let sprites = [];
         "#8a2be2", "#a52a2a", "#8b008b", "#b8860b", "#66cdaa", "#ff4500", "#daa520", "#98fb98",
         "#afeeee", "#db7093"
     ];
-const scaleRatio = 10;
+const scaleRatio = 2.3;
 
 const raycaster = new THREE.Raycaster(); 
 const mouse = new THREE.Vector2();
@@ -652,7 +652,7 @@ function disableScrollAndZoom(event) {
 // const controls = new OrbitControls(camera, renderer.domElement);
 const loadDistance = 5;
 const size = 300;
-const divisions = 2.5;
+const divisions = 50;
 scene.add(new THREE.GridHelper(size, divisions));
 // scene.add(new THREE.AxesHelper(100));
 
@@ -673,7 +673,7 @@ function loadAtlases(callback) {
       }
     });
   });
-  console.log(atlases)
+  // console.log(atlases)
 }
 
 // ----------------------------------------------------------------
@@ -747,7 +747,7 @@ generateScatterPlot(map, canvasWidth, canvasHeight*0.95, mapDom);
   });
   
   setupClickEvent(sprites, camera, renderer);
-  setupCameraControl(camera, renderer);
+  // setupCameraControl(camera, renderer);
   animate();
    enterButton.addEventListener('click',()=>{
     loadingDiv.classList.remove("fade-in");
@@ -763,7 +763,7 @@ generateScatterPlot(map, canvasWidth, canvasHeight*0.95, mapDom);
     const mapOpenButton = document.getElementById("mapButton");
   const mapCloseButton = document.getElementById("closeButton");
     mapCloseButton.addEventListener("click", function() {
-     console.log("clicked");
+    //  console.log("clicked");
     mapContainer.classList.add("hidden");
     mapContainer.classList.add("fade-out");
     mapContainer.classList.remove("fade-in");
@@ -773,7 +773,7 @@ generateScatterPlot(map, canvasWidth, canvasHeight*0.95, mapDom);
     });
 
   mapOpenButton.addEventListener("click", function() {
-     console.log("clicked");
+    //  console.log("clicked");
      unSelectSprite();
     mapContainer.classList.remove("hidden");
     mapContainer.classList.remove("fade-out");
@@ -785,7 +785,7 @@ generateScatterPlot(map, canvasWidth, canvasHeight*0.95, mapDom);
   resetButton.addEventListener('click', () =>{
     if(isCameraMoving) return;
     moveCamera(initialCameraPosition, initialLookAtPosition);
-    console.log("rest button clicked");
+    // console.log("rest button clicked");
      unSelectSprite();
     resetButton.style.display = 'none';
     
@@ -832,8 +832,8 @@ function setupCameraControl(camera, renderer) {
     const zoomDamping = 0.9;
     const maxY = 150;
     const minY = 0;
-    const maxXZ = 50;
-    const minXZ = 0;
+    const maxXZ = 200;
+    const minXZ = -200;
 
     // Orbit-like control variables
     let spherical = new THREE.Spherical();
@@ -882,6 +882,7 @@ function setupCameraControl(camera, renderer) {
     renderer.domElement.addEventListener('mousedown', function (e) {
         if (isCameraMoving) return; // Disable manual control if the camera is automatically moving.
         if (focusSprite) {
+           console.log("unselect here");
             unSelectSprite();
         }
         isDragging = true;
@@ -934,7 +935,7 @@ function setupCameraControl(camera, renderer) {
     };
 }
 
-const cleanupControls = setupCameraControl(camera, renderer);
+ const cleanupControls = setupCameraControl(camera, renderer);
 
 // Free Move Camera function 
 // ----------------------------------------------------------------
@@ -987,7 +988,7 @@ function setupClickEvent(sprites, camera, renderer) {
 
         if (intersects.length > 0) {
             const selectedSprite = intersects[0].object;
-            console.log(selectedSprite);
+            // console.log(selectedSprite);
 
             // Manage focus sprite transformations
             if (focusSprite && focusSprite !== selectedSprite) {
@@ -1007,7 +1008,7 @@ function setupClickEvent(sprites, camera, renderer) {
 
 function unSelectSprite(){
     if (focusSprite) {
-        console.log("trigger unselect")
+        // console.log("trigger unselect")
         focusSprite.scale.divideScalar(scaleRatio);
         focusSprite.position.y -= 5;
         focusSprite = null;
@@ -1020,8 +1021,8 @@ function selectSprite(sprite) {
     sprite.scale.multiplyScalar(scaleRatio);
     sprite.position.y += 5;
     focusSprite = sprite;
-    console.log("selectSprite is triggered" )
-    console.log(focusSprite);
+    // console.log("selectSprite is triggered" )
+    // console.log(focusSprite);
     enhanceSpriteWithText(focusSprite);
     const targetPosition = new THREE.Vector3(sprite.position.x + 2.5, sprite.position.y + 2.5, sprite.position.z +2.5);
 
@@ -1098,12 +1099,12 @@ function selectSprite(sprite) {
         });
 
         arrowLeft.addEventListener('click', () => {
-            console.log('arrow left clicked');
+            // console.log('arrow left clicked');
             changeSprite(focusSprite, -1);
         });
 
         arrowRight.addEventListener('click', () => {
-            console.log('arrow right clicked');
+            // console.log('arrow right clicked');
             changeSprite(focusSprite, 1);
         });
 
@@ -1118,11 +1119,11 @@ function changeSprite(focusSprite, direction) {
     if (currentIndex == null) return; // Ensure the index exists
      unSelectSprite();
     let newIndex = currentIndex + direction;
-    console.log("triggered new idx", newIndex);
+    // console.log("triggered new idx", newIndex);
 
     let newSprite = sprites.find(sprite => sprite.userData.idx === newIndex);
-    console.log("find from change Sprite: ");
-    console.log(newSprite);
+    // console.log("find from change Sprite: ");
+    // console.log(newSprite);
       while (!newSprite) {
           newIndex += direction;
           newSprite = sprites.find(sprite => sprite.userData.idx === newIndex);
@@ -1131,7 +1132,7 @@ function changeSprite(focusSprite, direction) {
 if (newSprite) {
     selectSprite(newSprite);
 } else {
-    console.log("No correct sprite found.");
+    // console.log("No correct sprite found.");
 }
 
 }
@@ -1258,15 +1259,16 @@ function moveCamera(target, lookAtPosition) {
             const easedT = easeInOutQuad(t);
             camera.position.lerpVectors(startPosition, target, easedT);
             camera.quaternion.slerpQuaternions(startQuaternion, targetQuaternion, easedT);
-            console.log("I am moving!");
+            // console.log("I am moving!");
             requestAnimationFrame(updateCameraPosition);
         } else {
             // Snap to final position and orientation
             camera.position.copy(target);
             camera.quaternion.copy(targetQuaternion);
-            console.log("last move!");
-            camera.lookAt(focusSprite.position.x,focusSprite.position.y,focusSprite.position.z);
-            isCameraMoving = false;
+            // console.log("last move!");
+            camera.lookAt(lookAtPosition);
+
+          
             
             // Show or hide reset button based on target position
             resetButton.style.display = (target !== initialCameraPosition) ? "flex" : "none";
@@ -1276,6 +1278,8 @@ function moveCamera(target, lookAtPosition) {
             if (btnContainer) {
                 btnContainer.style.opacity = 1;
             }
+            isCameraMoving = false;
+         
         }
     }
 
@@ -1295,7 +1299,7 @@ function moveCamera(target, lookAtPosition) {
 
 async function countMap(db) {
     try {
-        console.log("start");
+        // console.log("start");
         const results = await db.query(`
             SELECT 
                figure_id,
@@ -1310,7 +1314,7 @@ async function countMap(db) {
         `);
 
         const resultsArray = results.toArray();
-        console.log("end");
+        // console.log("end");
         return resultsArray;
     } catch (error) {
         console.error("Error executing query:", error);
@@ -1385,7 +1389,7 @@ function generateScatterPlot(data, w, h, parentDom) {
                 const targetPosition = create3DVector(targetGroup.x, 2, targetGroup.y);
                 const lookAtPosition = create3DVector(0, 0, 0);
 
-                console.log('Clicked dot int_value:', targetPosition);
+                // console.log('Clicked dot int_value:', targetPosition);
                 moveCamera(targetPosition, lookAtPosition);
      
                 const mapContainer = document.getElementById("mapContainer");
@@ -1408,14 +1412,14 @@ function generateScatterPlot(data, w, h, parentDom) {
             const intValue = data[index].int_value;
             text.setAttribute('data-int-value', intValue);
             text.addEventListener('click', (event) => {
-                console.log('Clicked text int_value:', text.getAttribute('data-int-value'));
+                // console.log('Clicked text int_value:', text.getAttribute('data-int-value'));
                 const index = Number(text.getAttribute('data-int-value'));
                 if(index){
                 const targetGroup = getObjectByIdx(chartPos, index);
                 const targetPosition = create3DVector(targetGroup.x, 2, targetGroup.y);
                 const lookAtPosition = create3DVector(0, 0, 0);
 
-                console.log('Clicked dot int_value:', targetPosition);
+                // console.log('Clicked dot int_value:', targetPosition);
                 moveCamera(targetPosition, lookAtPosition);
      
                 const mapContainer = document.getElementById("mapContainer");

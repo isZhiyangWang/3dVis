@@ -885,47 +885,43 @@ function setLinkBackground(linkElement, label) {
             imageObserver.observe(image);
         });
     }
-
-    function createFilters(data, selectElement, labelType) {
-        const labelSet = new Set(data.map(item => item[labelType]));
-        labelSet.forEach(label => {
-            const option = document.createElement('option');
-            option.value = label;
-            if(labelType == 'ChartType'){
+function createFilters(data, selectElement, labelType) {
+    const labelSet = new Set(data.map(item => item[labelType]));
+    labelSet.forEach(label => {
+        const option = document.createElement('option');
+        option.value = label;
+        if (labelType === 'ChartType') {
             option.text = visualizationTypes[label];
-            }else{
-          const retrievedObject = getObjectById(topicsArray, label);
-          if (retrievedObject) {
-              const objectString = JSON.stringify(retrievedObject);
-              option.text = retrievedObject.name;
-          } else {
-              console.log("No object found for label:", label);
-              option.text = "Default Name";  // Or handle this case as needed
-          }
-
-
-              
+        } else {
+            const retrievedObject = getObjectById(topicsArray, label);
+            if (retrievedObject) {
+                option.text = retrievedObject.name;
+            } else {
+                // console.log("No object found for label:", label);
+                option.text = "Default Name";
             }
-            
-            selectElement.appendChild(option);
-        });
-        selectElement.onchange = () => filterImages(selectElement.value, labelType);
-    }
- function filterImages(label, type) {
+        }
+        selectElement.appendChild(option);
+    });
+    selectElement.onchange = () => filterImages(selectElement.value, labelType);
+}
+
+function filterImages(label, type) {
     const links = Array.from(galleryElement.querySelectorAll('a')); // Convert NodeList to Array for sorting
+
     // Filter operation
     links.forEach(link => {
         const itemLabel = link.dataset[type];
         link.style.display = itemLabel === label || label === "All" ? 'flex' : 'none';
     });
 
-    // Sort operation based on label_2 if the filter is for label_1
-    if (type === 'label_1') {
+    // Sort operation based on ChartType if the filter is for primary_topic_id
+    if (type === 'primary_topic_id') {
         links.sort((a, b) => {
-            const label2A = a.dataset.ChartType;
-            const label2B = b.dataset.ChartType;
-            if (label2A < label2B) return -1;
-            if (label2A > label2B) return 1;
+            const chartTypeA = a.dataset.ChartType;
+            const chartTypeB = b.dataset.ChartType;
+            if (chartTypeA < chartTypeB) return -1;
+            if (chartTypeA > chartTypeB) return 1;
             return 0;
         });
 
@@ -937,6 +933,7 @@ function setLinkBackground(linkElement, label) {
         });
     }
 }
+
 
 
 
