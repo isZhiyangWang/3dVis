@@ -27,8 +27,8 @@ title: Explore Visualizations in 3D
 #threeD{
     display: flex;
     /* background: #EEEEEE; */
-background: rgb(224,142,31);
-background: linear-gradient(0deg, rgba(224,142,31,1) 0%, rgba(185,185,185,1) 100%);
+  background: rgb(224,142,31);
+  background: linear-gradient(0deg, rgba(224,142,31,1) 0%, rgba(185,185,185,1) 100%);
     justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
 
@@ -421,7 +421,7 @@ const db = await DuckDBClient.of({base: FileAttachment("/data/publications_princ
 // data extraction by the defined data function 
 const publicationDB = await initialDB(db)
 const chartPos = await countChartPos(db);
-// console.log(chartPos);
+
 const topicsArray = await countTopics(db);
 
 const getObjectById = (data,id) => {
@@ -1069,7 +1069,7 @@ function selectSprite(sprite) {
             btn.style.fontSize = '14px'; // Button font size
             btn.style.cursor = 'pointer'; // Pointer cursor on hover
             btn.style.transition = 'background-color 0.3s, transform 0.3s'; // Transition effect
-            btn.onmouseover = () => btn.style.backgroundColor = '#e2b87f'; // Hover background color
+            btn.onmouseover = () => btn.style.backgroundColor = '#e07e1f'; // Hover background color
             btn.onmouseout = () => btn.style.backgroundColor = '#E7EBEF'; // Default background color
             btn.onmousedown = () => btn.style.transform = 'scale(0.95)'; // Click scale effect
             btn.onmouseup = () => btn.style.transform = 'scale(1)'; 
@@ -1329,6 +1329,39 @@ async function countMap(db) {
     }
 }
 const map = await countMap(db);
+function updateChartPos(chartPos) {
+  // Keep only the first 42 items (indices 0 to 41)
+  const filteredChartPos = chartPos.slice(0, 42);
+
+  // Constants for the matrix dimensions
+  const cols = 7;
+  const rows = 6;
+
+  // Update the z values for each row
+  for (let row = 0; row < rows; row++) {
+    const baseZ = filteredChartPos[row * cols].z;
+    for (let col = 0; col < cols; col++) {
+      const idx = row * cols + col;
+      filteredChartPos[idx].z = baseZ;
+    }
+  }
+
+  // Update the x values for each column
+  for (let col = 0; col < cols; col++) {
+    const baseX = filteredChartPos[col].x;
+    for (let row = 0; row < rows; row++) {
+      const idx = row * cols + col;
+      filteredChartPos[idx].x = baseX;
+    }
+  }
+
+  return filteredChartPos;
+}
+
+
+
+const updatedChartPos = updateChartPos(chartPos);
+console.log(updatedChartPos);
 
 // Create a color scale using d3.scaleOrdinal
 const colorScale = d3.scaleOrdinal()
@@ -1346,23 +1379,23 @@ function generateScatterPlot(data, w, h, parentDom) {
         width: w,
         height: h,
         marks: [
-            Plot.dot(data, {
-                x: d => -d.xPos / 10,
-                y: d => d.zPos / 10,
-                fill: d => colorScale(d.int_value),
           
-                fillOpacity: 0.9,
-                r: 4,
-                // Add an attribute for int_value
-                title: d => `int_value: ${d.int_value}` // Tooltip, not for attribute
-            }),
-            Plot.image(chartPos, {
+            Plot.image(updatedChartPos, {
             x: d => -d.x,
             y: d => d.z,
             src: "https://github.com/JimmyXwtx/3dVis/blob/master/src/data/grey-box.png?raw=true",
             width: 150,
           }),
-            Plot.text(chartPos, {
+            Plot.dot(data, {
+                x: d => -d.xPos / 10,
+                y: d => d.zPos / 10,
+                fill: d => colorScale(d.int_value),
+                fillOpacity: 0,
+                r: 4,
+                // Add an attribute for int_value
+                title: d => `int_value: ${d.int_value}` // Tooltip, not for attribute
+            }),
+            Plot.text(updatedChartPos, {
                 x: d => -d.x,
                 y: d => d.z,
                 text: d => d.label,
@@ -1383,7 +1416,7 @@ function generateScatterPlot(data, w, h, parentDom) {
     });
     plot.style.position = "absolute";
     plot.style.scale = "93%";
-    plot.style.top = "6%";
+    plot.style.top = "0%";
     parentDom.appendChild(plot);
 
     // Add custom attributes to the dots and text elements

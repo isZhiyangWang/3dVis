@@ -18,7 +18,8 @@ export default {
 
   // Content to add to the head of the page, e.g. for a favicon:
   head: '<link rel="icon" href="pu.jpeg" type="image/png" sizes="32x32">',
-
+  theme: "light",
+  // details about always light https://observablehq.com/framework/config
   // The path to the source root.
   root: "src",
 

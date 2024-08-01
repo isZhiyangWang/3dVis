@@ -1069,7 +1069,7 @@ function selectSprite(sprite) {
             btn.style.fontSize = '14px'; // Button font size
             btn.style.cursor = 'pointer'; // Pointer cursor on hover
             btn.style.transition = 'background-color 0.3s, transform 0.3s'; // Transition effect
-            btn.onmouseover = () => btn.style.backgroundColor = '#e2b87f'; // Hover background color
+            btn.onmouseover = () => btn.style.backgroundColor = '#e07e1f'; // Hover background color
             btn.onmouseout = () => btn.style.backgroundColor = '#E7EBEF'; // Default background color
             btn.onmousedown = () => btn.style.transform = 'scale(0.95)'; // Click scale effect
             btn.onmouseup = () => btn.style.transform = 'scale(1)'; 
