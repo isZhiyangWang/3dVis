@@ -835,7 +835,7 @@ function setupCameraControl(camera, renderer) {
     let angularVelocityX = 0;
     const angularDamping = 0.95; // Increased damping for smoother motion
     let zoomVelocity = 0;
-    const zoomDamping = 0.9;
+    const zoomDamping = 0.2;
     const maxY = 150;
     const minY = 0;
     const maxXZ = 200;
