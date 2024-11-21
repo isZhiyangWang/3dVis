@@ -660,60 +660,15 @@ button#clear-filters:hover {
 
 
 ```js
-let visualizationTypes = [
-    "Violin",
-    "Density",
-    "Histogram",
-    "Boxplot",
-    "Ridgeline",
-    "Scatter",
-    "Heatmap",
-    "Correlogram",
-    "Bubble",
-    "Connected scatter",
-    "Density 2d",
-    "Barplot",
-    "Spider / Radar",
-    "Wordcloud",
-    "Parallel",
-    "Lollipop",
-    "Circular Barplot",
-    "Treemap",
-    "Venn diagram",
-    "Doughnut",
-    "Pie chart",
-    "Dendrogram",
-    "Circular packing",
-    "Sunburst",
-    "Line plot",
-    "Area",
-    "Stacked area",
-    "Streamchart",
-    "Map",
-    "Choropleth",
-    "Hexbin map",
-    "Cartogram",
-    "Connection",
-    "Bubble map",
-    "Chord diagram",
-    "Network",
-    "Sankey",
-    "Arc diagram",
-    "Edge bundling",
-    "Complex",
-    "Scientific Viz",
-    "Other-1",
-    "Other-2",
-    "Other-3",
-    "Other-4"
-];
+let visualizationTypes = ["Geometry", "Other", "Connection", "Sankey", "Scientific Viz", "Line Plot", "Flow Chart", "Chord Diagram", "Complex Diagram", "Arc Diagram", "Connected Scatter", "Circular Diagram", "Ridgeline", "Network", "Circular Packing", "Table", "Barplot", "Scatter", "Geometric", "Density", "Histogram", "Wordcloud", "Boxplot", "Density 2d", "Bubble", "Heatmap", "Dendrogram", "Circuit Diagram", "Contour Plot", "Error Bars Plot", "Error Bar Plot", "Surface Plot", "Hexbin Map", "Timeline", "Map", "Choropleth", "Stacked Area", "Spider / Radar", "Node Diagram", "Venn Diagram", "Correlogram", "Graph", "Violin", "3D Surface Plot", "Diagram", "Vector Field", "Spectrum", "Bubble Map", "Performance Diagram", "Radar", "Pie Chart", "Cluster visualization", "Doughnut", "Other (if none of the above categories fit)", "Area", "Cumulative completeness", "Polar Plot", "Matrix", "Schematic", "Parallel", "3D", "Bipartite", "Lollipop", "Forest Plot", "3D Scatter", "Contour", "Errorbar Plot", "Reconstructed OPD", "Horizontal Barplot", "Attention Map", "Image", "3D Surface", "3D Plot", "Light Plot", "UMAP", "Circular Barplot", "World model", "Phase Diagram", "Cumulative Distribution", "3D Barplot", "Band Structure", "Ternary Plot", "Streamchart", "CDF", "Point Plot", "Tree", "Photo", "Power Spectral Density", "Circle Diagram"];
+
 // Declare labels
 
 import * as duckdb from "npm:@duckdb/duckdb-wasm";
 // import libs
 
 // import data
-const db = await DuckDBClient.of({base: FileAttachment("/data/publications_princeton.db")});
+const db = await DuckDBClient.of({base: FileAttachment("/data/new_layout_updated.db")});
 // import data
 
 // Function to initialize the database and fetch the publication data

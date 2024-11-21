@@ -1,0 +1,1103 @@
+{
+    "name": "flare",
+    "children": [
+      {
+        "name": "Health Sciences",
+        "children": [
+          {
+            "name": "Dentistry",
+            "children": [
+              {
+                "name": "General Dentistry",
+                "value": 1
+              },
+              {
+                "name": "Oral Surgery",
+                "value": 2
+              },
+              {
+                "name": "Orthodontics",
+                "value": 3
+              },
+              {
+                "name": "Periodontics",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "name": "Health Professions",
+            "children": [
+              {
+                "name": "Complementary and Manual Therapy",
+                "value": 1
+              },
+              {
+                "name": "Emergency Medical Services",
+                "value": 3
+              },
+              {
+                "name": "General Health Professions",
+                "value": 24
+              },
+              {
+                "name": "Health Information Management",
+                "value": 3
+              },
+              {
+                "name": "Medical Terminology",
+                "value": 1
+              },
+              {
+                "name": "Pharmacy",
+                "value": 2
+              },
+              {
+                "name": "Physical Therapy, Sports Therapy and Rehabilitation",
+                "value": 1
+              },
+              {
+                "name": "Radiological and Ultrasound Technology",
+                "value": 3
+              },
+              {
+                "name": "Speech and Hearing",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "name": "Medicine",
+            "children": [
+              {
+                "name": "Anesthesiology and Pain Medicine",
+                "value": 2
+              },
+              {
+                "name": "Biochemistry",
+                "value": 2
+              },
+              {
+                "name": "Cardiology and Cardiovascular Medicine",
+                "value": 19
+              },
+              {
+                "name": "Complementary and alternative medicine",
+                "value": 5
+              },
+              {
+                "name": "Critical Care and Intensive Care Medicine",
+                "value": 3
+              },
+              {
+                "name": "Dermatology",
+                "value": 3
+              },
+              {
+                "name": "Emergency Medicine",
+                "value": 3
+              },
+              {
+                "name": "Endocrinology, Diabetes and Metabolism",
+                "value": 10
+              },
+              {
+                "name": "Epidemiology",
+                "value": 30
+              },
+              {
+                "name": "Family Practice",
+                "value": 2
+              },
+              {
+                "name": "Gastroenterology",
+                "value": 1
+              },
+              {
+                "name": "Genetics",
+                "value": 3
+              },
+              {
+                "name": "Geriatrics and Gerontology",
+                "value": 3
+              },
+              {
+                "name": "Health Informatics",
+                "value": 1
+              },
+              {
+                "name": "Hematology",
+                "value": 5
+              },
+              {
+                "name": "Hepatology",
+                "value": 5
+              },
+              {
+                "name": "Immunology and Allergy",
+                "value": 2
+              },
+              {
+                "name": "Infectious Diseases",
+                "value": 15
+              },
+              {
+                "name": "Nephrology",
+                "value": 3
+              },
+              {
+                "name": "Neurology",
+                "value": 11
+              },
+              {
+                "name": "Obstetrics and Gynecology",
+                "value": 4
+              },
+              {
+                "name": "Oncology",
+                "value": 24
+              },
+              {
+                "name": "Ophthalmology",
+                "value": 6
+              },
+              {
+                "name": "Orthopedics and Sports Medicine",
+                "value": 4
+              },
+              {
+                "name": "Otorhinolaryngology",
+                "value": 1
+              },
+              {
+                "name": "Pathology and Forensic Medicine",
+                "value": 12
+              },
+              {
+                "name": "Pediatrics, Perinatology and Child Health",
+                "value": 14
+              },
+              {
+                "name": "Pharmacology",
+                "value": 9
+              },
+              {
+                "name": "Physiology",
+                "value": 21
+              },
+              {
+                "name": "Psychiatry and Mental health",
+                "value": 10
+              },
+              {
+                "name": "Public Health, Environmental and Occupational Health",
+                "value": 33
+              },
+              {
+                "name": "Pulmonary and Respiratory Medicine",
+                "value": 28
+              },
+              {
+                "name": "Radiology, Nuclear Medicine and Imaging",
+                "value": 22
+              },
+              {
+                "name": "Rehabilitation",
+                "value": 4
+              },
+              {
+                "name": "Reproductive Medicine",
+                "value": 4
+              },
+              {
+                "name": "Rheumatology",
+                "value": 6
+              },
+              {
+                "name": "Surgery",
+                "value": 27
+              },
+              {
+                "name": "Urology",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "name": "Nursing",
+            "children": [
+              {
+                "name": "Issues, ethics and legal aspects",
+                "value": 1
+              },
+              {
+                "name": "Leadership and Management",
+                "value": 1
+              },
+              {
+                "name": "Nutrition and Dietetics",
+                "value": 9
+              }
+            ]
+          },
+          {
+            "name": "Veterinary",
+            "children": [
+              {
+                "name": "Equine",
+                "value": 1
+              },
+              {
+                "name": "Small Animals",
+                "value": 5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Life Sciences",
+        "children": [
+          {
+            "name": "Agricultural and Biological Sciences",
+            "children": [
+              {
+                "name": "Agronomy and Crop Science",
+                "value": 3
+              },
+              {
+                "name": "Animal Science and Zoology",
+                "value": 5
+              },
+              {
+                "name": "Aquatic Science",
+                "value": 4
+              },
+              {
+                "name": "Ecology, Evolution, Behavior and Systematics",
+                "value": 13
+              },
+              {
+                "name": "Food Science",
+                "value": 13
+              },
+              {
+                "name": "Forestry",
+                "value": 2
+              },
+              {
+                "name": "General Agricultural and Biological Sciences",
+                "value": 6
+              },
+              {
+                "name": "Horticulture",
+                "value": 1
+              },
+              {
+                "name": "Insect Science",
+                "value": 9
+              },
+              {
+                "name": "Plant Science",
+                "value": 42
+              },
+              {
+                "name": "Soil Science",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "name": "Biochemistry, Genetics and Molecular Biology",
+            "children": [
+              {
+                "name": "Aging",
+                "value": 1
+              },
+              {
+                "name": "Biochemistry",
+                "value": 2
+              },
+              {
+                "name": "Biophysics",
+                "value": 5
+              },
+              {
+                "name": "Biotechnology",
+                "value": 6
+              },
+              {
+                "name": "Cancer Research",
+                "value": 7
+              },
+              {
+                "name": "Cell Biology",
+                "value": 14
+              },
+              {
+                "name": "Clinical Biochemistry",
+                "value": 3
+              },
+              {
+                "name": "Developmental Biology",
+                "value": 1
+              },
+              {
+                "name": "Endocrinology",
+                "value": 5
+              },
+              {
+                "name": "Genetics",
+                "value": 34
+              },
+              {
+                "name": "Molecular Biology",
+                "value": 110
+              },
+              {
+                "name": "Molecular Medicine",
+                "value": 2
+              },
+              {
+                "name": "Physiology",
+                "value": 3
+              },
+              {
+                "name": "Structural Biology",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "name": "Immunology and Microbiology",
+            "children": [
+              {
+                "name": "Applied Microbiology and Biotechnology",
+                "value": 1
+              },
+              {
+                "name": "Immunology",
+                "value": 19
+              },
+              {
+                "name": "Microbiology",
+                "value": 4
+              },
+              {
+                "name": "Parasitology",
+                "value": 5
+              },
+              {
+                "name": "Virology",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "name": "Neuroscience",
+            "children": [
+              {
+                "name": "Behavioral Neuroscience",
+                "value": 1
+              },
+              {
+                "name": "Biological Psychiatry",
+                "value": 1
+              },
+              {
+                "name": "Cellular and Molecular Neuroscience",
+                "value": 9
+              },
+              {
+                "name": "Cognitive Neuroscience",
+                "value": 26
+              },
+              {
+                "name": "Developmental Neuroscience",
+                "value": 3
+              },
+              {
+                "name": "Endocrine and Autonomic Systems",
+                "value": 3
+              },
+              {
+                "name": "Neurology",
+                "value": 7
+              },
+              {
+                "name": "Sensory Systems",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "name": "Pharmacology, Toxicology and Pharmaceutics",
+            "children": [
+              {
+                "name": "Pharmaceutical Science",
+                "value": 5
+              },
+              {
+                "name": "Pharmacology",
+                "value": 6
+              },
+              {
+                "name": "Toxicology",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Physical Sciences",
+        "children": [
+          {
+            "name": "Chemical Engineering",
+            "children": [
+              {
+                "name": "Bioengineering",
+                "value": 1
+              },
+              {
+                "name": "Catalysis",
+                "value": 4
+              },
+              {
+                "name": "Filtration and Separation",
+                "value": 1
+              },
+              {
+                "name": "Fluid Flow and Transfer Processes",
+                "value": 4
+              },
+              {
+                "name": "Process Chemistry and Technology",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "name": "Chemistry",
+            "children": [
+              {
+                "name": "Analytical Chemistry",
+                "value": 4
+              },
+              {
+                "name": "Electrochemistry",
+                "value": 1
+              },
+              {
+                "name": "Inorganic Chemistry",
+                "value": 10
+              },
+              {
+                "name": "Organic Chemistry",
+                "value": 30
+              },
+              {
+                "name": "Physical and Theoretical Chemistry",
+                "value": 6
+              },
+              {
+                "name": "Spectroscopy",
+                "value": 9
+              }
+            ]
+          },
+          {
+            "name": "Computer Science",
+            "children": [
+              {
+                "name": "Artificial Intelligence",
+                "value": 61
+              },
+              {
+                "name": "Computational Theory and Mathematics",
+                "value": 20
+              },
+              {
+                "name": "Computer Graphics and Computer-Aided Design",
+                "value": 3
+              },
+              {
+                "name": "Computer Networks and Communications",
+                "value": 34
+              },
+              {
+                "name": "Computer Science Applications",
+                "value": 7
+              },
+              {
+                "name": "Computer Vision and Pattern Recognition",
+                "value": 34
+              },
+              {
+                "name": "Hardware and Architecture",
+                "value": 6
+              },
+              {
+                "name": "Human-Computer Interaction",
+                "value": 6
+              },
+              {
+                "name": "Information Systems",
+                "value": 31
+              },
+              {
+                "name": "Signal Processing",
+                "value": 10
+              },
+              {
+                "name": "Software",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "name": "Earth and Planetary Sciences",
+            "children": [
+              {
+                "name": "Atmospheric Science",
+                "value": 13
+              },
+              {
+                "name": "Earth-Surface Processes",
+                "value": 6
+              },
+              {
+                "name": "Geochemistry and Petrology",
+                "value": 6
+              },
+              {
+                "name": "Geology",
+                "value": 4
+              },
+              {
+                "name": "Geophysics",
+                "value": 10
+              },
+              {
+                "name": "Oceanography",
+                "value": 9
+              },
+              {
+                "name": "Paleontology",
+                "value": 5
+              },
+              {
+                "name": "Space and Planetary Science",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "name": "Energy",
+            "children": [
+              {
+                "name": "Energy Engineering and Power Technology",
+                "value": 1
+              },
+              {
+                "name": "General Energy",
+                "value": 1
+              },
+              {
+                "name": "Nuclear Energy and Engineering",
+                "value": 1
+              },
+              {
+                "name": "Renewable Energy, Sustainability and the Environment",
+                "value": 16
+              }
+            ]
+          },
+          {
+            "name": "Engineering",
+            "children": [
+              {
+                "name": "Aerospace Engineering",
+                "value": 35
+              },
+              {
+                "name": "Architecture",
+                "value": 3
+              },
+              {
+                "name": "Automotive Engineering",
+                "value": 8
+              },
+              {
+                "name": "Biomedical Engineering",
+                "value": 64
+              },
+              {
+                "name": "Building and Construction",
+                "value": 15
+              },
+              {
+                "name": "Civil and Structural Engineering",
+                "value": 31
+              },
+              {
+                "name": "Computational Mechanics",
+                "value": 25
+              },
+              {
+                "name": "Control and Systems Engineering",
+                "value": 30
+              },
+              {
+                "name": "Electrical and Electronic Engineering",
+                "value": 91
+              },
+              {
+                "name": "Industrial and Manufacturing Engineering",
+                "value": 9
+              },
+              {
+                "name": "Mechanical Engineering",
+                "value": 39
+              },
+              {
+                "name": "Mechanics of Materials",
+                "value": 15
+              },
+              {
+                "name": "Media Technology",
+                "value": 9
+              },
+              {
+                "name": "Ocean Engineering",
+                "value": 15
+              },
+              {
+                "name": "Safety, Risk, Reliability and Quality",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "name": "Environmental Science",
+            "children": [
+              {
+                "name": "Ecological Modeling",
+                "value": 1
+              },
+              {
+                "name": "Ecology",
+                "value": 27
+              },
+              {
+                "name": "Environmental Chemistry",
+                "value": 7
+              },
+              {
+                "name": "Environmental Engineering",
+                "value": 16
+              },
+              {
+                "name": "Global and Planetary Change",
+                "value": 23
+              },
+              {
+                "name": "Health, Toxicology and Mutagenesis",
+                "value": 12
+              },
+              {
+                "name": "Industrial and Manufacturing Engineering",
+                "value": 6
+              },
+              {
+                "name": "Management, Monitoring, Policy and Law",
+                "value": 17
+              },
+              {
+                "name": "Nature and Landscape Conservation",
+                "value": 9
+              },
+              {
+                "name": "Pollution",
+                "value": 10
+              },
+              {
+                "name": "Water Science and Technology",
+                "value": 12
+              }
+            ]
+          },
+          {
+            "name": "Materials Science",
+            "children": [
+              {
+                "name": "Biomaterials",
+                "value": 12
+              },
+              {
+                "name": "Ceramics and Composites",
+                "value": 1
+              },
+              {
+                "name": "Electronic, Optical and Magnetic Materials",
+                "value": 16
+              },
+              {
+                "name": "General Materials Science",
+                "value": 1
+              },
+              {
+                "name": "Materials Chemistry",
+                "value": 55
+              },
+              {
+                "name": "Polymers and Plastics",
+                "value": 11
+              },
+              {
+                "name": "Surfaces, Coatings and Films",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "name": "Mathematics",
+            "children": [
+              {
+                "name": "Algebra and Number Theory",
+                "value": 4
+              },
+              {
+                "name": "Applied Mathematics",
+                "value": 15
+              },
+              {
+                "name": "Computational Mathematics",
+                "value": 1
+              },
+              {
+                "name": "Discrete Mathematics and Combinatorics",
+                "value": 4
+              },
+              {
+                "name": "Geometry and Topology",
+                "value": 10
+              },
+              {
+                "name": "Mathematical Physics",
+                "value": 11
+              },
+              {
+                "name": "Modeling and Simulation",
+                "value": 3
+              },
+              {
+                "name": "Numerical Analysis",
+                "value": 4
+              },
+              {
+                "name": "Statistics and Probability",
+                "value": 12
+              },
+              {
+                "name": "Theoretical Computer Science",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "name": "Physics and Astronomy",
+            "children": [
+              {
+                "name": "Acoustics and Ultrasonics",
+                "value": 1
+              },
+              {
+                "name": "Astronomy and Astrophysics",
+                "value": 21
+              },
+              {
+                "name": "Atomic and Molecular Physics, and Optics",
+                "value": 34
+              },
+              {
+                "name": "Condensed Matter Physics",
+                "value": 8
+              },
+              {
+                "name": "Instrumentation",
+                "value": 2
+              },
+              {
+                "name": "Nuclear and High Energy Physics",
+                "value": 13
+              },
+              {
+                "name": "Radiation",
+                "value": 6
+              },
+              {
+                "name": "Statistical and Nonlinear Physics",
+                "value": 14
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Social Sciences",
+        "children": [
+          {
+            "name": "Arts and Humanities",
+            "children": [
+              {
+                "name": "Archeology",
+                "value": 16
+              },
+              {
+                "name": "Classics",
+                "value": 4
+              },
+              {
+                "name": "Conservation",
+                "value": 5
+              },
+              {
+                "name": "General Arts and Humanities",
+                "value": 2
+              },
+              {
+                "name": "History",
+                "value": 30
+              },
+              {
+                "name": "History and Philosophy of Science",
+                "value": 13
+              },
+              {
+                "name": "Language and Linguistics",
+                "value": 13
+              },
+              {
+                "name": "Literature and Literary Theory",
+                "value": 30
+              },
+              {
+                "name": "Museology",
+                "value": 5
+              },
+              {
+                "name": "Music",
+                "value": 5
+              },
+              {
+                "name": "Philosophy",
+                "value": 33
+              },
+              {
+                "name": "Religious studies",
+                "value": 11
+              },
+              {
+                "name": "Visual Arts and Performing Arts",
+                "value": 12
+              }
+            ]
+          },
+          {
+            "name": "Business, Management and Accounting",
+            "children": [
+              {
+                "name": "Accounting",
+                "value": 10
+              },
+              {
+                "name": "Business and International Management",
+                "value": 2
+              },
+              {
+                "name": "Management Information Systems",
+                "value": 6
+              },
+              {
+                "name": "Management of Technology and Innovation",
+                "value": 6
+              },
+              {
+                "name": "Marketing",
+                "value": 7
+              },
+              {
+                "name": "Organizational Behavior and Human Resource Management",
+                "value": 10
+              },
+              {
+                "name": "Strategy and Management",
+                "value": 20
+              }
+            ]
+          },
+          {
+            "name": "Decision Sciences",
+            "children": [
+              {
+                "name": "General Decision Sciences",
+                "value": 1
+              },
+              {
+                "name": "Information Systems and Management",
+                "value": 8
+              },
+              {
+                "name": "Management Science and Operations Research",
+                "value": 19
+              },
+              {
+                "name": "Statistics, Probability and Uncertainty",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "name": "Economics, Econometrics and Finance",
+            "children": [
+              {
+                "name": "Economics and Econometrics",
+                "value": 46
+              },
+              {
+                "name": "Finance",
+                "value": 13
+              },
+              {
+                "name": "General Economics, Econometrics and Finance",
+                "value": 9
+              }
+            ]
+          },
+          {
+            "name": "Psychology",
+            "children": [
+              {
+                "name": "Applied Psychology",
+                "value": 3
+              },
+              {
+                "name": "Clinical Psychology",
+                "value": 27
+              },
+              {
+                "name": "Developmental and Educational Psychology",
+                "value": 15
+              },
+              {
+                "name": "Experimental and Cognitive Psychology",
+                "value": 21
+              },
+              {
+                "name": "General Psychology",
+                "value": 1
+              },
+              {
+                "name": "Neuropsychology and Physiological Psychology",
+                "value": 1
+              },
+              {
+                "name": "Social Psychology",
+                "value": 37
+              }
+            ]
+          },
+          {
+            "name": "Social Sciences",
+            "children": [
+              {
+                "name": "Anthropology",
+                "value": 16
+              },
+              {
+                "name": "Archeology",
+                "value": 2
+              },
+              {
+                "name": "Communication",
+                "value": 6
+              },
+              {
+                "name": "Cultural Studies",
+                "value": 18
+              },
+              {
+                "name": "Demography",
+                "value": 16
+              },
+              {
+                "name": "Development",
+                "value": 2
+              },
+              {
+                "name": "Education",
+                "value": 39
+              },
+              {
+                "name": "Gender Studies",
+                "value": 15
+              },
+              {
+                "name": "General Social Sciences",
+                "value": 2
+              },
+              {
+                "name": "Geography, Planning and Development",
+                "value": 5
+              },
+              {
+                "name": "Health",
+                "value": 9
+              },
+              {
+                "name": "Law",
+                "value": 12
+              },
+              {
+                "name": "Library and Information Sciences",
+                "value": 1
+              },
+              {
+                "name": "Life-span and Life-course Studies",
+                "value": 1
+              },
+              {
+                "name": "Linguistics and Language",
+                "value": 3
+              },
+              {
+                "name": "Political Science and International Relations",
+                "value": 68
+              },
+              {
+                "name": "Public Administration",
+                "value": 3
+              },
+              {
+                "name": "Safety Research",
+                "value": 11
+              },
+              {
+                "name": "Sociology and Political Science",
+                "value": 139
+              },
+              {
+                "name": "Transportation",
+                "value": 5
+              },
+              {
+                "name": "Urban Studies",
+                "value": 10
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

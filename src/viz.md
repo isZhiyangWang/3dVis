@@ -4,7 +4,7 @@ title: Explore Visualizations in 3D Back UP
 ---
 
 
-# Explore Visualizations in 3D Back UP
+# Explore Visualizations in 3D 
 
 
 <!-- below is the css for the decoration -->
@@ -415,7 +415,7 @@ import * as duckdb from "npm:@duckdb/duckdb-wasm";
 // import libs
 
 // import data
-const db = await DuckDBClient.of({base: FileAttachment("/data/publications_princeton.db")});
+const db = await DuckDBClient.of({base: FileAttachment("/data/new_layout.db")});
 // import data
 
 // data extraction by the defined data function 
@@ -469,7 +469,8 @@ async function initialDB(db) {
             LEFT JOIN 
                 base.figure_property fp ON f.id = fp.figure_id
             ORDER BY 
-                f.id;
+                f.id
+            LIMIT 10000;
         `);
         
         const resultsArray = results.toArray();
@@ -1357,13 +1358,13 @@ function generateScatterPlot(data, w, h, parentDom) {
                 // Add an attribute for int_value
                 title: d => `int_value: ${d.int_value}` // Tooltip, not for attribute
             }),
-            Plot.image(chartPos, {
-            x: d => -d.x,
-            y: d => d.z,
-            src: "https://github.com/JimmyXwtx/3dVis/blob/master/src/data/grey-box.png?raw=true",
-            width: 120,
-            title: "Name"
-          }),
+          //   Plot.image(chartPos, {
+          //   x: d => -d.x,
+          //   y: d => d.z,
+          //   src: "https://github.com/JimmyXwtx/3dVis/blob/master/src/data/grey-box.png?raw=true",
+          //   width: 120,
+          //   title: "Name"
+          // }),
             Plot.text(chartPos, {
                 x: d => -d.x,
                 y: d => d.z,
@@ -1388,7 +1389,7 @@ function generateScatterPlot(data, w, h, parentDom) {
     plot.style.position = "absolute";
     plot.style.scale = "93%";
     plot.style.top = "6%";
-    parentDom.appendChild(plot);
+    // parentDom.appendChild(plot);
 
     // Add custom attributes to the dots and text elements
     const svg = parentDom.querySelector('svg');
