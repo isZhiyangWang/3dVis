@@ -1,6 +1,6 @@
 ---
 toc: false
-title: Explore Visualizations in 3D Back UP
+title: Explore Visualizations in 3D
 ---
 
 
