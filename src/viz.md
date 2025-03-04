@@ -655,10 +655,10 @@ loadDataAndInitialize();
 
 // modify based on the extact atlases drawn
 const atlases = [
-  { url: 'https://iszhiyang.com/fakeData/atlas-1.jpg', grid: { x: 64, y: 64 }, count: 4096 },
-  { url: 'https://iszhiyang.com/fakeData/atlas-2.jpg', grid: { x: 64, y: 64 }, count: 4096 },
-  { url: 'https://iszhiyang.com/fakeData/atlas-3.jpg', grid: { x: 64, y: 64 }, count: 3384 },
-  { url: 'https://iszhiyang.com/fakeData/atlas-4.jpg', grid: { x: 64, y: 35 }, count: 1463 }
+  { url: 'https://raw.githubusercontent.com/isZhiyangWang/3dVis/refs/heads/master/images/atlas-1.jpg', grid: { x: 64, y: 64 }, count: 4096 },
+  { url: 'https://raw.githubusercontent.com/isZhiyangWang/3dVis/refs/heads/master/images/atlas-2.jpg', grid: { x: 64, y: 64 }, count: 4096 },
+  { url: 'https://raw.githubusercontent.com/isZhiyangWang/3dVis/refs/heads/master/images/atlas-3.jpg', grid: { x: 64, y: 64 }, count: 3384 },
+  { url: 'https://raw.githubusercontent.com/isZhiyangWang/3dVis/refs/heads/master/images/atlas-4.jpg', grid: { x: 64, y: 35 }, count: 1463 }
 ];
 
 const scene = new THREE.Scene();
