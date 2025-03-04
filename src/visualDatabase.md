@@ -5,6 +5,36 @@ toc: false
 
 
 <style>
+/* Loading overlay styling */
+#loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255, 0.8); /* Light overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999; /* Top-most */
+}
+
+/* Simple loader spinner */
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #007bff; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.0s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 /*! PhotoSwipe main CSS by Dmytro Semenov | photoswipe.com */
 
@@ -745,6 +775,9 @@ const getObjectById = (data,id) => {
 
 const database = await initialDB(db);
 
+// Once data is loaded, hide loading:
+document.getElementById("loading-overlay").style.display = "none";
+
 
 
 let traffic = [];
@@ -915,6 +948,12 @@ gallery();
 
 ```
 
+
+<!-- Loading Overlay (initially visible) -->
+<div id="loading-overlay">
+  <div class="loader"></div>
+  <p>Loading your data...</p>
+</div>
 
 
 <div class="gallery-container card">

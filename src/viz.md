@@ -10,6 +10,37 @@ title: Explore Visualizations in 3D
 <!-- below is the css for the decoration -->
 
 <style>
+  /* Loading overlay styling */
+#loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255, 0.8); /* Light overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999; /* Top-most */
+}
+
+/* Simple loader spinner */
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #007bff; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.0s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 .disabled{
     pointer-events: none;
 }
@@ -606,6 +637,10 @@ async function loadDataAndInitialize() {
   try {
     // Fetch the data from your database or API
     const publicationDB = await initialDB(db);
+
+      // Once data is loaded, hide loading:
+      document.getElementById("loading-overlay").style.display = "none";
+
     // Process the data as needed
     imagePositions = JSON.parse(publicationDB);
  
@@ -620,10 +655,10 @@ loadDataAndInitialize();
 
 // modify based on the extact atlases drawn
 const atlases = [
-  { url: 'https://zhiyangwang.site/fakeData/atlas-1.jpg', grid: { x: 64, y: 64 }, count: 4096 },
-  { url: 'https://zhiyangwang.site/fakeData/atlas-2.jpg', grid: { x: 64, y: 64 }, count: 4096 },
-  { url: 'https://zhiyangwang.site/fakeData/atlas-3.jpg', grid: { x: 64, y: 64 }, count: 3384 },
-  { url: 'https://zhiyangwang.site/fakeData/atlas-4.jpg', grid: { x: 64, y: 35 }, count: 1463 }
+  { url: 'https://iszhiyang.com/fakeData/atlas-1.jpg', grid: { x: 64, y: 64 }, count: 4096 },
+  { url: 'https://iszhiyang.com/fakeData/atlas-2.jpg', grid: { x: 64, y: 64 }, count: 4096 },
+  { url: 'https://iszhiyang.com/fakeData/atlas-3.jpg', grid: { x: 64, y: 64 }, count: 3384 },
+  { url: 'https://iszhiyang.com/fakeData/atlas-4.jpg', grid: { x: 64, y: 35 }, count: 1463 }
 ];
 
 const scene = new THREE.Scene();
@@ -1468,6 +1503,14 @@ function generateScatterPlot(data, w, h, parentDom) {
 
 
 ```
+
+
+<!-- Loading Overlay (initially visible) -->
+<div id="loading-overlay">
+  <div class="loader"></div>
+  <p>Loading your data...</p>
+</div>
+
 <div  id="loading" class="fade-in">
 <div class="loadingContent">
 <div class="contentTitle">Vis Sieve - 3D Exploration</div>
