@@ -1508,7 +1508,7 @@ function generateScatterPlot(data, w, h, parentDom) {
 <!-- Loading Overlay (initially visible) -->
 <div id="loading-overlay">
   <div class="loader"></div>
-  <p>Loading your data...</p>
+  <p>Loading data...</p>
 </div>
 
 <div  id="loading" class="fade-in">
